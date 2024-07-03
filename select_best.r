@@ -56,8 +56,12 @@ u$Log10.OG[is.na(u$Log10.OG)] = 0
 
 message(sprintf('%s HG assignments exceeding threshold',sum(u$Log10.HG>=thr)))
 message(sprintf('%s OG assignments exceeding threshold',sum(u$Log10.OG>=thr)))
-u[u$Log10.HG<thr,]$Predicted.HG = ''
-u[u$Log10.OG<thr,]$Predicted.OG = ''
+if(any(u$Log10.HG<thr)){
+	u[u$Log10.HG<thr,]$Predicted.HG = ''
+}
+if(any(u$Log10.OG<thr)){
+	u[u$Log10.OG<thr,]$Predicted.OG = ''
+}
 u$Log10.HG = round(u$Log10.HG,2)
 u$Log10.OG = round(u$Log10.OG,2)
 write.table(u,outfile,sep = '\t',quote = F,row.names = F)
