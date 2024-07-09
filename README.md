@@ -18,7 +18,7 @@ We can also think of an html output that will report domain this in the query an
 1. The database should be built from __realigned__ proteins
 2. Add C2H2s!
 
-
+Problem: HG realignment will take a very long time 
 
 # Owenia
 
