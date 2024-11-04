@@ -1,4 +1,7 @@
-db*
-tmp
-results
-data
+```bash
+# Compare Owefus performance 
+# /home/grygoriyzolotarov/Documents/projects/2024_annelid_tfs
+mkdir -p results
+FASTA=shared_data/AnnelidProt/Owenia_chrom_v060921_prot_longestIso.fasta
+./TFclass/tf_class.sh -i $FASTA -o results/Owefus.Chema.v2.tsv -n 15 -d db_v2.0
+```
